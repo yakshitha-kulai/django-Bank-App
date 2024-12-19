@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <h2>Your Loan Applications</h2>
+    {% if loans %}
+        <table class="table table-bordered table-striped" style="border-color: navy; color: black; line-height: 2rem; width: 100%;">
+            <thead>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Amount</th>
+                    <th>Interest Rate (%)</th>
+                    <th>Tenure (Years)</th>
+                    <th>Total Payable (₹)</th>
+                    <th>Applied On</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for loan in loans %}
+                    <tr>
+                        <td>{{ loan.loan_type }}</td>
+                        <td>{{ loan.loan_amount }}</td>
+                        <td>{{ loan.interest_rate }}</td>
+                        <td>{{ loan.tenure_years }}</td>
+                        <td>{{ loan.total_amount_payable }}</td>
+                        <td>{{ loan.applied_on|date:"d M Y, H:i" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You have not applied for any loans yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

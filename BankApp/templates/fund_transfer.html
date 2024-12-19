@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container">  
+    <h2 class="formUpdateHeading"style="margin-left:557px;">Fund Transfer</h2>
+
+    <form method="post" id="fundTransferForm" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+
+    padding: 25px;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 346px;
+    margin: auto;
+">
+        {% csrf_token %}
+        
+        <!-- Account Number Field -->
+        <div class="form-group">
+          <label for="account_number">Recipient Account Number</label>
+          {{ form.account_number }}
+        </div>
+  
+        <!-- Amount Field -->
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          {{ form.amount }}
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;margin-left: 80px;">Transfer</button>
+      </form></div>
+
+{% endblock %}

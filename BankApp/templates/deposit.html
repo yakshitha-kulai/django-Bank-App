@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block body_block %}
+<h2 class="formUpdateHeading" style="margin-left: 650px;margin-bottom: -0.5rem;line-height: 5.2">Deposit</h2>
+<form method="post" class="form-group" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+padding: 25px;">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary" style="margin-left: 70px;">Deposit</button>
+</form>
+{% endblock %}

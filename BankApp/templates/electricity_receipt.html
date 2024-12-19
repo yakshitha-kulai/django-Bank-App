@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container">
+    <h2 style="margin-bottom: 2rem; margin-left: 409px;margin-top: 40px;">Electricity Payment Receipt</h2>
+
+    <div class="receipt">
+        <table class="table table-bordered mt-3" style="border-color: navy; color: black; line-height: 2rem; width: 50%; margin-left: 325px;" >
+            <thead class="thead-dark">
+                <tr>
+                    <th colspan="2" class="text-center">Payment Receipt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Receipt ID:</th>
+                    <td>{{ payment.id }}</td>
+                </tr>
+                <tr>
+                    <th>Customer:</th>
+                    <td>{{ customer.Name }}</td>
+                </tr>
+                <tr>
+                    <th>Bill Number:</th>
+                    <td>{{ payment.consumer_number }}</td>
+                </tr>
+                <tr>
+                    <th>Amount Paid:</th>
+                    <td>₹{{ payment.amount }}</td>
+                </tr>
+                <tr>
+                    <th>Payment Date:</th>
+                    <td>{{ payment.paid_on|date:"d M Y, H:i:s" }}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="text-center mt-4">
+            <p><strong>Thank you for your payment!</strong></p>
+        </div>
+    </div>
+    
+
+    <div class="text-center">
+        <a href="{% url 'transaction_history' %}" class="btn btn-primary">Back to History</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'main.html' %} {% block body_block %}
+<h2 class="formUpdateHeading" style="margin-left: 650px;">LogIn</h2>
+<form method="post" enctype="multipart/form-data" class="formupdate" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+
+padding: 25px;
+border-radius: 0;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+width: 346px;">
+  {% csrf_token %}
+  <div class="form-group" style="display: inline;">
+    {{ form.as_p }}
+    <button type="submit" class="submit-button" style="width: 144px;">LogIn</button>
+    <a class="submit-button" href="{% url 'signup' %}" type="button" style="width: 144px;">SignUp</a>
+  </div>
+</form>
+
+{% endblock %}

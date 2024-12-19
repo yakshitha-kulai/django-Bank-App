@@ -1,0 +1,16 @@
+
+  {% extends 'main.html' %}
+  {% block body_block %}
+    <div class="container mt-5">
+      <h2>Create Customer Account</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  {% endblock %}
+  
+

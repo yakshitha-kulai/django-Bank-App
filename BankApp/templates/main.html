@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    {% block stylecontent %} {% endblock %}
+    <style>
+      /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          } */
+      body {
+        background-color: lightblue;
+      }
+
+      /* login Page */
+      .bground {
+        background: linear-gradient(90deg, #75c2d5, #0056b3);
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin: auto;
+      }
+      .formUpdateContainer {
+        margin-top: -3rem !important;
+      }
+      .formUpdateHeading {
+        margin-bottom: -5.5rem;
+        font-weight: 500;
+        line-height: 7.2;
+        margin-left: 515px;
+      }
+
+      .formupdate {
+        background: linear-gradient(90deg, #75c2d5, #0056b3);
+        padding: 15px;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 324px;
+        margin: auto;
+      }
+      
+      .formupdatesubmit {
+        display: inline-block;
+        width: 109px;
+        padding: 10px;
+        background-color: #0056b3;
+        color: #ffffff;
+        border: none;
+        border-radius: 2px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* text-align: center; */
+        margin: 0;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        justify-content: center;
+      }
+
+      .submit-button {
+        display: inline-block;
+        width: 130px;
+        padding: 10px;
+        background-color: #0056b3;
+        color: #ffffff;
+        border: none;
+        border-radius: 2px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+
+      .submit-button:hover {
+        /* background-color: #0056b3; */
+        background-color: #75c2d5;
+      }
+
+      .submit-button[type="button"] {
+        /* background-color: #75c2d5; */
+        background-color: #0056b3;
+
+        color: #ffffff;
+      }
+
+      .submit-button[type="button"]:hover {
+        /* background-color: #0056b3; */
+        background-color: #75c2d5;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* signup page */
+      .btn {
+        display: inline-block;
+        width: 130px;
+        padding: 10px;
+        background-color: #0056b3;
+        color: #ffffff;
+        border: none;
+        border-radius: 2px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+
+      .btn:hover {
+        /* background-color: #0056b3; */
+        background-color: #75c2d5;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      p a {
+        /* color: #75c2d5; */
+        color: #0056b3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      p a:hover {
+        /* color:#75c2d5; */
+        color: #0056b3;
+      }
+
+      /* home page */
+      /* Hero Section */
+      .jumbotron {
+        background: linear-gradient(90deg, #75c2d5, #72aceb);
+        color: white;
+        border-radius: 2px;
+        margin-bottom: 30px;
+      }
+
+      .jumbotron h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .jumbotron .btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        border-radius: 25px;
+      }
+
+      /* Features Section */
+      .card {
+        margin: 15px 0;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card .card-body .btn:hover {
+        /* background-color: #0056b3; */
+        background-color: #75c2d5;
+
+        color: black;
+      }
+
+      .card-body {
+        padding: 20px;
+        background: linear-gradient(90deg, #75c2d5, #72aceb);
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #0056b3;
+      }
+
+      .card-text {
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      .card .btn {
+        margin-top: 15px;
+        /* background-color: #007bff; */
+
+        color: white;
+        border-radius: 20px;
+      }
+
+      /* Testimonials Section */
+      blockquote {
+        border-left: 5px solid #75c2d5;
+        padding-left: 15px;
+        color: #555;
+      }
+
+      blockquote .blockquote-footer {
+        font-size: 0.9rem;
+        color: #007bff;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #f8f9fa;
+        color: #333;
+        border-top: 1px solid #ddd;
+      }
+
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      footer a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+
+      /* Responsive Styles */
+      /* @media (max-width: 768px) {
+      .jumbotron h1 {
+        font-size: 2rem;
+      }
+
+      .jumbotron p {
+        font-size: 1rem;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+
+      footer p {
+        font-size: 0.85rem;
+      }
+    } */
+
+      .txcolor {
+        color: white;
+        font-size: 16px;
+      }
+
+      .menu {
+        background: linear-gradient(90deg, #75c2d5, #72aceb);
+        /* Semi-transparent white */
+        border: none;
+        /* Optional: remove border */
+        backdrop-filter: blur(4px);
+        /* Optional: adds a blur effect for better visuals */
+      }
+
+      .item {
+        background-color: transparent;
+        /* Fully transparent */
+        color: #000;
+        /* Set text color for better visibility */
+      }
+
+      .item:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Slightly visible background on hover */
+        color: #000;
+      }
+    </style>
+
+    <title>Bank App</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bground">
+      <div class="container-fluid">
+        <span class="material-symbols-outlined"> account_balance </span>
+        <!-- <a class="navbar-brand" href="#">Bank App</a> -->
+        <button
+          class="navbar-toggler text"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="margin-right: 20px; margin-left: 30px;">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'home' %}" style="font-weight: bold;"
+                >Home</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Account</a>
+            </li> -->
+            <li class="nav-item dropdown" style="margin-right: 15px; margin-left: 30px;">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"  style="font-weight: bold;"
+              >
+                Account
+              </a>
+              <ul class="dropdown-menu menu" aria-labelledby="navbarDropdown">
+                {% if customers %} {% for customer in customers %}
+                <li>
+                  <a
+                    class="dropdown-item item"
+                    href="{% url 'update_account' Cust_ID=customer.Cust_ID %}"
+                    >Update</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item item"
+                    href="{% url 'close_account' Cust_ID=customer.Cust_ID %}" 
+                    >Close</a
+                  >
+                </li>
+                {% endfor %} {% endif %}
+              </ul>
+            </li>
+            <li class="nav-item dropdown" style="margin-right: 15px; margin-left: 30px;">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-weight: bold;"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item item" href="{% url 'deposit' %}" 
+                    >Deposit</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item item" href="{% url 'withdraw' %}" 
+                    >Withdraw</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item item" href="{% url 'fund_transfer' %}" 
+                    >Fund transfer</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" style="margin-right: 15px; margin-left: 30px;">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-weight: bold;"
+              >
+                Bill Payments
+              </a>
+              <ul class="dropdown-menu menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item item" href="{% url 'electricity' %}" 
+                    >Electricity</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item item" href="{% url 'water' %}" 
+                    >Water</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item item" href="{% url 'recharge' %}" 
+                    >Mobile Recharge</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item" style="margin-right: 15px; margin-left: 30px;">
+              <a class="nav-link" href="{% url 'loan' %}" style="font-weight: bold;"
+                >Loan</a
+              >
+            </li>
+            <li class="nav-item" style="margin-right: 15px; margin-left: 30px;">
+              <a class="nav-link" href="{% url 'transaction_history' %}" style="font-weight: bold;"
+                >History</a
+              >
+            </li>
+            <li class="nav-item" style="margin-right: 15px; margin-left: 30px;">
+              <a class="nav-link" href="{% url 'profile' %} "style="font-weight: bold;" >Profile</a>
+            </li>
+           
+          </ul>
+          <div class="d-flex" style="background: linear-gradient(90deg, #75c2d5, #72aceb);width: auto;">
+            <div class="dropdown">
+              {% if user.is_authenticated %}
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {{ user.username }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="userDropdown" style="top: 100%;
+                left:0;background: linear-gradient(90deg, #75c2d5, #72aceb);border: none;backdrop-filter: blur(4px);min-width: 50px;
+">
+                  <li>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Logout
+                    </a>
+                  </li>
+                </ul>
+              {% else %}
+                <!-- <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="guestDropdown"
+                  aria-expanded="false"
+                > -->
+                <a class="dropdown-item" href="{% url 'login' %}" style="color: white;">
+                  Login
+                </a>
+                </button>
+                <!-- <ul class="dropdown-menu" aria-labelledby="guestDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{% url 'login' %}">
+                      Login
+                    </a>
+                  </li>
+                </ul> -->
+              {% endif %}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="body">{% block body_block %} {% endblock %}</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

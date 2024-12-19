@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block body_block %}
+<h2 class="formUpdateHeading" style="margin-left: 650px;">Withdraw</h2>
+<form method="post" class="formupdate" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+
+padding: 25px;
+border-radius: 0;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+width: 346px;
+margin: auto;
+">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary" style="margin-left: 80px;">Withdraw</button>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <h2>Account Updated Successfully!</h2>
+    <p>Your updated account details:</p>
+    
+    <!-- Table displaying account details -->
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td><strong>Account Number:</strong></td>
+                <td>{{ customer.Cust_ID }}</td>
+            </tr>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td>{{ customer.Name }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phone Number:</strong></td>
+                <td>{{ customer.Phone_no }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td>{{ customer.Email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3">Home</a>
+</div>
+{% endblock %}

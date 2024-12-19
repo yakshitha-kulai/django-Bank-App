@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block stylecontent %}
+<style>
+    .form-control {
+        margin-bottom: 10px;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+    .alert {
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+    <h2 
+    style="margin-top: 59px;
+    margin-bottom: 2rem;margin-left: 493px;">Water Bill Payment</h2>
+    <form method="post" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+
+    padding: 25px;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 349px;
+    margin: auto;
+">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.office.label_tag }}
+            {{ form.office }}
+        </div>
+        <div class="form-group">
+            {{ form.consumer_number.label_tag }}
+            {{ form.consumer_number }}
+        </div>
+        <div class="form-group">
+            {{ form.amount.label_tag }}
+            {{ form.amount }}
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-left: 80px;">Pay</button>
+    </form>
+</div>
+{% endblock %}

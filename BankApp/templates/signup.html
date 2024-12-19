@@ -1,0 +1,20 @@
+{% extends 'main.html' %} {% block body_block %}
+<div class="container mt-5 formUpdateContainer">
+  <h2 style="margin-bottom: 2rem; margin-left: 568px;
+    margin-top: 73px;">Sign Up</h2>
+
+<form method="post" enctype="multipart/form-data" class="formupdate">
+  {% csrf_token %}
+  <div class="form-group">
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary mt-3" style="margin-left: 80px;">Sign Up</button>  
+  </div>
+</form>
+
+<div style="margin-left: 513px">
+  <p style="display: inline-block;">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</div>
+</div>
+
+
+{% endblock %}

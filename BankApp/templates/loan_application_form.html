@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    
+    <h2 style="margin-top: 59px;
+    margin-bottom: 2rem;margin-left: 496px;">Apply for a Loan</h2>
+    <form method="post" style="background: linear-gradient(90deg, #75c2d5, #72aceb);
+
+    padding: 25px;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 349px;
+    margin: auto;
+">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary " style="margin-left: 80px;">Submit</button>
+    </form>
+</div>
+{% endblock %}

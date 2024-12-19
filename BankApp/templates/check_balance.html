@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <h2>Balance</h2>
+
+    <!-- Balance Display Table -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Detail</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Your Current Balance</strong></td>
+                        <td>₹{{ balance }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Options to go back or view history -->
+            <div class="mt-4 text-center">
+                <a href="{% url 'profile' %}" class="btn btn-primary">Profile</a>
+                <a href="{% url 'transaction_history' %}" class="btn btn-secondary">View History</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

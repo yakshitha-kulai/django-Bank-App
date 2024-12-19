@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block body_block %}
+  <div class="container mt-5 formUpdateContainer">
+    <h2 class="formUpdateHeading">Update Account</h2>
+    <form method="post" class="formupdate">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary mt-3" style="margin-left: 80px;">Update</button>
+    </form>
+  </div>
+{% endblock %}

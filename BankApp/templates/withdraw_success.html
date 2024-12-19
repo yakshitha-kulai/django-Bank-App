@@ -1,0 +1,18 @@
+{% extends 'main.html' %} {% block body_block %}
+<div class="container mt-5">
+  <div class="alert alert-success">
+    <h2>Withdrawal Successful!</h2>
+    <p>
+      You have successfully withdrawn <strong>{{ amount }}</strong>. Your
+      updated balance is: <strong>{{ balance }}</strong>.
+    </p>
+  </div>
+  <div style="margin-left: 513px">
+    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+    <a href="{% url 'transaction_history' %}" class="btn btn-secondary"
+      >View History</a
+    >
+  </div>
+</div>
+
+{% endblock %}

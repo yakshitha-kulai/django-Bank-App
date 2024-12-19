@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+  <div class="alert alert-success">
+    <h2>Account Closure Request Submitted</h2>
+    <p>Your request to close the account with ID <strong>{{ Cust_ID }}</strong> has been sent to the manager for further processing. You will be notified once the process is completed.</p>
+
+  </div>
+  
+  <div style="margin-left: 513px;">
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3"> Home</a>
+  </div>
+
+</div>
+{% endblock %}
